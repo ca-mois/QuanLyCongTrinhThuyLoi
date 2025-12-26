@@ -77,24 +77,6 @@ INSERT INTO TaiKhoan (Ten, MatKhau, QuyenId, HoSoId) VALUES
     ('0989154248', '1234', 3, 1),
     ('0989708960', '1234', 3, 2);
 GO
-
--- Bảng HuongDanSuDung
-IF OBJECT_ID('HuongDanSuDung', 'U') IS NOT NULL DROP TABLE HuongDanSuDung;
-GO
-
-CREATE TABLE HuongDanSuDung (
-    Id INT PRIMARY KEY IDENTITY,
-    TieuDe NVARCHAR(200),
-    NoiDung NVARCHAR(MAX)
-);
-GO
-
-INSERT INTO HuongDanSuDung (TieuDe, NoiDung) VALUES
-    (N'Hướng dẫn đăng nhập hệ thống', N'Nhập tên đăng nhập và mật khẩu vào form đăng nhập...'),
-    (N'Hướng dẫn quản lý công trình', N'Chọn menu Quản lý công trình, click nút Thêm mới...'),
-    (N'Hướng dẫn xem báo cáo', N'Vào menu Báo cáo thống kê, chọn loại báo cáo cần xem...');
-GO
-
 -- ============================================================
 -- PHẦN 2: ĐỊA GIỚI HÀNH CHÍNH
 -- ============================================================
@@ -259,11 +241,6 @@ CREATE TABLE ChiTietDuongOng (
 );
 GO
 
-INSERT INTO ChiTietDuongOng (CongTrinhId, ChieuDai, DuongKinh, VatLieu) VALUES
-    (2, 500.00, 300, N'Bê tông ly tâm'),
-    (2, 300.00, 200, N'Gang dẻo');
-GO
-
 -- Bảng ChiTietKenhMuong
 IF OBJECT_ID('ChiTietKenhMuong', 'U') IS NOT NULL DROP TABLE ChiTietKenhMuong;
 GO
@@ -297,11 +274,6 @@ CREATE TABLE ChiTietTramBom (
     CotNuocThietKe DECIMAL(10,2)
 );
 GO
-
-INSERT INTO ChiTietTramBom (CongTrinhId, SoMayBom, CongSuatMay, LuuLuongThietKe, CotNuocThietKe) VALUES
-    (2, 3, 75.00, 1.20, 8.50);
-GO
-
 -- Bảng ChiTietHoChua
 IF OBJECT_ID('ChiTietHoChua', 'U') IS NOT NULL DROP TABLE ChiTietHoChua;
 GO
@@ -316,10 +288,6 @@ CREATE TABLE ChiTietHoChua (
     MucNuocLuThietKe DECIMAL(10,2),
     DienTichMatNuoc DECIMAL(15,2)
 );
-GO
-
-INSERT INTO ChiTietHoChua (CongTrinhId, TongDungTich, DungTichHuuIch, DungTichChet, MucNuocDangBinhThuong, MucNuocLuThietKe, DienTichMatNuoc) VALUES
-    (3, 5000000.00, 4500000.00, 500000.00, 15.00, 18.00, 50000.00);
 GO
 
 -- Bảng ChiTietDapTran
@@ -337,9 +305,6 @@ CREATE TABLE ChiTietDapTran (
 );
 GO
 
-INSERT INTO ChiTietDapTran (CongTrinhId, ChieuDaiDap, ChieuCaoDap, CaoTrinhNguongTran, HinhThucTieuNang, KetCauDap) VALUES
-    (5, 120.00, 12.00, 16.00, N'Tràn tự do', N'Bê tông cốt thép');
-GO
 
 -- ============================================================
 -- PHẦN 4: NGHIỆP VỤ & KẾ HOẠCH
@@ -359,11 +324,6 @@ CREATE TABLE KyQuyHoach (
 );
 GO
 
-INSERT INTO KyQuyHoach (TenKyQuyHoach, NamBatDau, NamKetThuc, MoTa, TrangThai) VALUES
-    (N'Quy hoạch thủy lợi 2020-2025', 2020, 2025, N'Quy hoạch phát triển hệ thống thủy lợi khu vực Bắc Bộ', N'Đang thực hiện'),
-    (N'Quy hoạch thủy lợi 2025-2030', 2025, 2030, N'Quy hoạch giai đoạn mới, tập trung hiện đại hóa', N'Kế hoạch');
-GO
-
 -- Bảng VuMua
 IF OBJECT_ID('VuMua', 'U') IS NOT NULL DROP TABLE VuMua;
 GO
@@ -375,12 +335,6 @@ CREATE TABLE VuMua (
     ThoiGianBatDau DATE,
     ThoiGianKetThuc DATE
 );
-GO
-
-INSERT INTO VuMua (TenVu, Nam, ThoiGianBatDau, ThoiGianKetThuc) VALUES
-    (N'Vụ Đông Xuân', 2024, '2024-01-15', '2024-05-30'),
-    (N'Vụ Hè Thu', 2024, '2024-06-01', '2024-09-30'),
-    (N'Vụ Đông Xuân', 2025, '2025-01-15', '2025-05-30');
 GO
 
 -- Bảng KetQuaTuoi
@@ -397,12 +351,6 @@ CREATE TABLE KetQuaTuoi (
     NangSuat DECIMAL(10,2),
     SanLuong DECIMAL(15,2)
 );
-GO
-
-INSERT INTO KetQuaTuoi (VuMuaId, DonViHanhChinhId, CongTrinhId, DienTichKeHoach, DienTichThucTe, NangSuat, SanLuong) VALUES
-    (1, 3, 2, 100.00, 98.50, 6.50, 640.25),
-    (2, 4, 2, 80.00, 79.00, 5.80, 458.20),
-    (1, 7, 1, 150.00, 148.00, 6.80, 1006.40);
 GO
 
 -- ============================================================
@@ -425,12 +373,6 @@ CREATE TABLE LichSuBaoTri (
 );
 GO
 
-INSERT INTO LichSuBaoTri (CongTrinhId, NgayBatDau, NgayKetThuc, NoiDung, DonViThucHien, KinhPhi, KetQua) VALUES
-    (1, '2024-10-01', '2024-10-15', N'Sửa chữa kè bị hư hỏng do sóng biển', N'Công ty TNHH Xây dựng ABC', 500000000.00, N'Đã hoàn thành, chất lượng tốt'),
-    (2, '2024-11-01', '2024-11-05', N'Bảo dưỡng định kỳ máy bơm', N'Đội bảo trì nội bộ', 50000000.00, N'Đã hoàn thành'),
-    (3, '2024-09-15', '2024-09-20', N'Nạo vét hồ chứa', N'Công ty CP Thủy lợi XYZ', 300000000.00, N'Đã hoàn thành');
-GO
-
 -- Bảng NhatKyVanHanh
 IF OBJECT_ID('NhatKyVanHanh', 'U') IS NOT NULL DROP TABLE NhatKyVanHanh;
 GO
@@ -445,12 +387,6 @@ CREATE TABLE NhatKyVanHanh (
     KetQua NVARCHAR(MAX),
     ChiPhi DECIMAL(15,2)
 );
-GO
-
-INSERT INTO NhatKyVanHanh (CongTrinhId, NgayBatDau, NgayKetThuc, NguoiThucHien, NoiDung, KetQua, ChiPhi) VALUES
-    (2, '2024-12-01', '2024-12-05', N'Nguyễn Văn A', N'Vận hành trạm bơm phục vụ tưới vụ đông xuân', N'Tưới được 50ha lúa', 5000000.00),
-    (3, '2024-12-01', '2024-12-07', N'Trần Thị B', N'Xả nước từ hồ chứa phục vụ tưới', N'Xả 10000m3 nước', 2000000.00),
-    (4, '2024-11-15', '2024-11-20', N'Lê Văn C', N'Điều tiết nước qua kênh mương', N'Cấp nước cho 80ha', 3000000.00);
 GO
 
 -- Bảng VanBanPhapLy
@@ -468,12 +404,6 @@ CREATE TABLE VanBanPhapLy (
 );
 GO
 
-INSERT INTO VanBanPhapLy (CongTrinhId, SoKyHieu, NgayBanHanh, TrichYeu, LoaiVanBan, TepDinhKem) VALUES
-    (1, 'QĐ-123/2018-UBND', '2018-05-15', N'Quyết định phê duyệt dự án xây dựng kè biển Thụy Hải', N'Quyết định', NULL),
-    (2, 'CV-456/2015-SNN', '2015-03-20', N'Công văn cho phép xây dựng trạm bơm Bách Khoa', N'Công văn', NULL),
-    (3, 'QĐ-789/2010-UBND', '2010-08-10', N'Quyết định phê duyệt đầu tư xây dựng hồ chứa Đồng Tâm', N'Quyết định', NULL);
-GO
-
 -- Bảng TaiLieuDinhKem
 IF OBJECT_ID('TaiLieuDinhKem', 'U') IS NOT NULL DROP TABLE TaiLieuDinhKem;
 GO
@@ -488,13 +418,6 @@ CREATE TABLE TaiLieuDinhKem (
 );
 GO
 
-INSERT INTO TaiLieuDinhKem (DoiTuongId, LoaiDoiTuong, TenFile, DuongDan, MoTa) VALUES
-    (1, N'CongTrinh', N'ban_ve_thiet_ke_ke.pdf', '/uploads/congTrinh/1/', N'Bản vẽ thiết kế công trình kè biển'),
-    (2, N'CongTrinh', N'hinh_anh_tram_bom.jpg', '/uploads/congTrinh/2/', N'Hình ảnh trạm bơm Bách Khoa'),
-    (3, N'CongTrinh', N'ban_ve_ho_chua.pdf', '/uploads/congTrinh/3/', N'Bản vẽ hồ chứa Đồng Tâm'),
-    (1, N'VanBanPhapLy', N'quyet_dinh_123.pdf', '/uploads/vanban/1/', N'File văn bản quyết định phê duyệt'),
-    (2, N'VanBanPhapLy', N'cong_van_456.pdf', '/uploads/vanban/2/', N'File công văn cho phép xây dựng');
-GO
 
 -- Bảng LichSuTruyCap
 IF OBJECT_ID('LichSuTruyCap', 'U') IS NOT NULL DROP TABLE LichSuTruyCap;
@@ -510,12 +433,6 @@ CREATE TABLE LichSuTruyCap (
 );
 GO
 
-INSERT INTO LichSuTruyCap (HoSoId, ThoiGian, HanhDong, IP, DoiTuongThaoTac) VALUES
-    (1, '2024-12-08 10:30:00', N'Đăng nhập', '192.168.1.100', N'Hệ thống'),
-    (1, '2024-12-08 10:35:00', N'Xem công trình', '192.168.1.100', N'Công trình ID: 1'),
-    (2, '2024-12-08 11:00:00', N'Đăng nhập', '192.168.1.101', N'Hệ thống'),
-    (2, '2024-12-08 11:05:00', N'Thêm công trình', '192.168.1.101', N'Công trình ID: 5');
-GO
 
 -- ============================================================
 -- PHẦN 6: VIEW (CHO GIAO DIỆN & BÁO CÁO)
