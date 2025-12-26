@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\controller\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\controller\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\controller\\chitietkithuatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\controller\\chitietkithuatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\bando\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\bando\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\winapp\\views\\bando\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\bando\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\chitiethochua\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\chitiethochua\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\congtrinh\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\congtrinh\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\kyquyhoach\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\kyquyhoach\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\lichsubaotri\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\lichsubaotri\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\lichsutruycap\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\lichsutruycap\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\winapp\\views\\nhatkyvanhanh\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\nhatkyvanhanh\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\winapp\\views\\tailieu\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\tailieu\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\thongke\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\thongke\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\vanbanphaply\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\vanbanphaply\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\views\\vumua\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\vumua\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\models\\migrateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\models\\migrateresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\winapp\\views\\bando\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\views\\bando\\mapcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|c:\\users\\win 11\\downloads\\forestguard-dcam-main (b\u1EA3n g\u1ED1c)\\forestguard-dcam-main\\forestguard\\winapp\\app_data\\actions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{897D371C-FAC8-4711-9A23-4ED46A663D0D}|WinApp\\WinApp.csproj|solutionrelative:winapp\\app_data\\actions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\VuMua\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\VuMua\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\VuMua\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\VuMua\\Index.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:33:43.492Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThongKeController.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Controller\\ThongKeController.cs",
+              "RelativeDocumentMoniker": "WinApp\\Controller\\ThongKeController.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Controller\\ThongKeController.cs",
+              "RelativeToolTip": "WinApp\\Controller\\ThongKeController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:57:04.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChiTietKiThuatController.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Controller\\ChiTietKiThuatController.cs",
+              "RelativeDocumentMoniker": "WinApp\\Controller\\ChiTietKiThuatController.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Controller\\ChiTietKiThuatController.cs",
+              "RelativeToolTip": "WinApp\\Controller\\ChiTietKiThuatController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:56:26.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\ChiTietHoChua\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\ChiTietHoChua\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\ChiTietHoChua\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\ChiTietHoChua\\Index.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:55:22.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\CongTrinh\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\CongTrinh\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\CongTrinh\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\CongTrinh\\Index.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:54:36.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\KyQuyHoach\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\KyQuyHoach\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\KyQuyHoach\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\KyQuyHoach\\Index.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:54:12.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\LichSuTruyCap\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\LichSuTruyCap\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\LichSuTruyCap\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\LichSuTruyCap\\Index.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:53:51.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\ThongKe\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\ThongKe\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\ThongKe\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\ThongKe\\Index.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:52:32.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\VanBanPhapLy\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\VanBanPhapLy\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\VanBanPhapLy\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\VanBanPhapLy\\Index.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDEAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:52:15.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MapControl.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\BanDo\\MapControl.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\BanDo\\MapControl.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\BanDo\\MapControl.cs",
+              "RelativeToolTip": "WinApp\\Views\\BanDo\\MapControl.cs",
+              "ViewState": "AgIAAEcBAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:51:33.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Actions.json",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\App_Data\\Actions.json",
+              "RelativeDocumentMoniker": "WinApp\\App_Data\\Actions.json",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\App_Data\\Actions.json",
+              "RelativeToolTip": "WinApp\\App_Data\\Actions.json",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-26T08:44:04.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\LichSuBaoTri\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\LichSuBaoTri\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\LichSuBaoTri\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\LichSuBaoTri\\Index.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:35:51.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MapControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\BanDo\\MapControl.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\BanDo\\MapControl.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\BanDo\\MapControl.cs [Design]",
+              "RelativeToolTip": "WinApp\\Views\\BanDo\\MapControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T01:03:00.361Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MigrateResult.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Models\\MigrateResult.cs",
+              "RelativeDocumentMoniker": "WinApp\\Models\\MigrateResult.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Models\\MigrateResult.cs",
+              "RelativeToolTip": "WinApp\\Models\\MigrateResult.cs",
+              "ViewState": "AgIAADgBAAAAAAAAAIAxwOQAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:31:17.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\NhatKyVanHanh\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\NhatKyVanHanh\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\NhatKyVanHanh\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\NhatKyVanHanh\\Index.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T00:31:04.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\BanDo\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\BanDo\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\BanDo\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\BanDo\\Index.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA+wBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T00:14:15.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cs",
+              "DocumentMoniker": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\TaiLieu\\Index.cs",
+              "RelativeDocumentMoniker": "WinApp\\Views\\TaiLieu\\Index.cs",
+              "ToolTip": "C:\\Users\\Win 11\\Downloads\\ForestGuard-DCAM-main (b\u1EA3n g\u1ED1c)\\ForestGuard-DCAM-main\\ForestGuard\\WinApp\\Views\\TaiLieu\\Index.cs",
+              "RelativeToolTip": "WinApp\\Views\\TaiLieu\\Index.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T00:42:36.075Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
