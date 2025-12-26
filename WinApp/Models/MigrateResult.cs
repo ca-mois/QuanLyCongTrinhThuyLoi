@@ -272,14 +272,7 @@ namespace Models
         public string DuongDan { get; set; }
         public string MoTa { get; set; }
     }
-
-    public partial class HuongDanSuDung
-    {
-        public int? Id { get; set; }
-        public string TieuDe { get; set; }
-        public string NoiDung { get; set; }
-    }
-
+    
     // ======================= SQL VIEWS (TỔNG HỢP) =======================
 
     public partial class ViewCongTrinh
