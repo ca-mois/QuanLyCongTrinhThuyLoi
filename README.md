@@ -17,7 +17,7 @@
    - Open Visual Studio
    - Go to File > Open > Project/Solution
    - Navigate to the cloned repository folder
-   - Select the `.sln` file and click Open
+   - Select `WinApp.sln` and click Open
 
 3. **Restore NuGet packages**
    - Right-click on the solution in Solution Explorer
