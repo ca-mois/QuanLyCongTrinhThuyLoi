@@ -1,4 +1,4 @@
-﻿{
+{
     "#": {
         "home": "Trang chủ",
         "migrate": "Load database",
@@ -39,11 +39,18 @@
         "vumua": "Quản lý Vụ mùa",
         "vumua/index": "Danh sách Vụ mùa",
 
-        "thongke": "Báo cáo thống kê",
+        "thongke": "Báo cáo thống kê tưới",
         "thongke/sosanhtheovu": "So sánh theo Vụ",
         "thongke/sosanhtheohuyen": "So sánh các Huyện",
         "thongke/sosanhtheoxa": "So sánh các Xã",
         "thongke/tonghoptoantinh": "Tổng hợp toàn Tỉnh",
+
+        "thongkecongtrinh": "Thống kê số lượng CT",
+        "thongkecongtrinh/theoloai": "Theo Loại công trình",
+        "thongkecongtrinh/theocap": "Theo Cấp công trình",
+        "thongkecongtrinh/theohuyen": "Theo Huyện",
+        "thongkecongtrinh/theoxa": "Theo Xã",
+        "thongkecongtrinh/toantinh": "Tổng hợp toàn Tỉnh",
 
         "kyquyhoach/index": "Kỳ quy hoạch",
         "loaicongtrinh/index": "Loại công trình",
@@ -111,7 +118,6 @@
                         "Text": "Quản lý công trình",
                         "Refs": [ "congtrinh/index", "bando/index" ]
                     },
-
                     {
                         "Text": "Chi tiết kỹ thuật",
                         "Refs": [ "chitiethochua/index", "chitietdaptran/index", "chitietkenhmuong/index", "chitietduongong/index", "chitietke/index", "chitiettrambom/index" ]
@@ -119,8 +125,17 @@
                     {
                         "Text": "Quản lý & Vận hành",
                         "Refs": [ "kyquyhoach/index", "nhatkyvanhanh/index", "lichsubaotri/index" ]
+                    },
+                    {
+                        "Text": "Thống kê số lượng công trình",
+                        "Refs": [
+                            "thongkecongtrinh/theoloai",
+                            "thongkecongtrinh/theocap",
+                            "thongkecongtrinh/theohuyen",
+                            "thongkecongtrinh/theoxa",
+                            "thongkecongtrinh/toantinh"
+                        ]
                     }
-
                 ]
             },
             "ketquatuoi": {
