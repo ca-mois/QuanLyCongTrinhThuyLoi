@@ -472,19 +472,43 @@ INNER JOIN Quyen ON TaiKhoan.QuyenId = Quyen.Id
 INNER JOIN HoSo ON TaiKhoan.HoSoId = HoSo.Id;
 GO
 
--- View ViewCongTrinh
-IF OBJECT_ID('ViewCongTrinh', 'V') IS NOT NULL DROP VIEW ViewCongTrinh;
+
+-- ViewLichSuTruyCap: Dùng cho WinApp.Views.LichSuTruyCap
+IF OBJECT_ID('ViewLichSuTruyCap', 'V') IS NOT NULL DROP VIEW ViewLichSuTruyCap;
+GO
+CREATE VIEW ViewLichSuTruyCap AS
+SELECT 
+    ls.Id,
+    ls.ThoiGian,
+    COALESCE(hs.Ten, 'Unknown') AS TenNguoiDung,
+    ls.HanhDong,
+    ls.DoiTuongThaoTac,
+    ls.IP,
+    ls.HoSoId -- Để binding form edit
+FROM LichSuTruyCap ls
+LEFT JOIN HoSo hs ON ls.HoSoId = hs.Id;
 GO
 
+
+-- ============================================================
+--  NHÓM VIEW CÔNG TRÌNH CHUNG & BẢN ĐỒ 
+-- ============================================================
+
+-- ViewCongTrinh: Dùng cho WinApp.Views.CongTrinh (Danh sách tổng)
+IF OBJECT_ID('ViewCongTrinh', 'V') IS NOT NULL DROP VIEW ViewCongTrinh;
+GO
 CREATE VIEW ViewCongTrinh AS
-SELECT
-    ct.Id,
-    ct.TenCongTrinh,
+SELECT 
+    ct.Id, 
+    ct.TenCongTrinh, 
     ct.MaHieu,
     ct.NamXayDung,
     ct.TrangThai,
     ct.DiaDiem,
     ct.MoTa,
+    ct.HinhAnh,
+    ct.DuLieuGIS,
+    ct.CapCongTrinhId, ct.LoaiCongTrinhId, ct.DonViQuanLyId, ct.DonViHanhChinhId, -- Các cột ID để binding Select
     lc.TenLoai AS LoaiCongTrinh,
     cc.TenCap AS CapCongTrinh,
     dv1.Ten AS DonViQuanLy,
@@ -496,76 +520,113 @@ LEFT JOIN DonVi dv1 ON ct.DonViQuanLyId = dv1.Id
 LEFT JOIN DonVi dv2 ON ct.DonViHanhChinhId = dv2.Id;
 GO
 
--- View ViewKetQuaTuoi
-IF OBJECT_ID('ViewKetQuaTuoi', 'V') IS NOT NULL DROP VIEW ViewKetQuaTuoi;
+-- ViewBanDo
+IF OBJECT_ID('ViewBanDo', 'V') IS NOT NULL DROP VIEW ViewBanDo;
+GO
+CREATE VIEW ViewBanDoCongTrinh AS
+SELECT 
+    ct.Id, 
+    ct.TenCongTrinh, 
+    ct.MaHieu, 
+    ct.DiaDiem, 
+    ct.DuLieuGIS,
+    lc.TenLoai AS LoaiCongTrinh
+FROM CongTrinh ct
+LEFT JOIN LoaiCongTrinh lc ON ct.LoaiCongTrinhId = lc.Id
+WHERE ct.DuLieuGIS IS NOT NULL AND ct.DuLieuGIS <> '';
 GO
 
-CREATE VIEW ViewKetQuaTuoi AS
-SELECT
-    kq.Id,
-    vm.TenVu,
-    vm.Nam,
-    dv.Ten AS DonVi,
-    ct.TenCongTrinh,
-    kq.DienTichKeHoach,
-    kq.DienTichThucTe,
-    kq.NangSuat,
-    kq.SanLuong,
-    (kq.DienTichThucTe / NULLIF(kq.DienTichKeHoach, 0) * 100) AS TyLeHoanThanh
-FROM KetQuaTuoi kq
-LEFT JOIN VuMua vm ON kq.VuMuaId = vm.Id
-LEFT JOIN DonVi dv ON kq.DonViHanhChinhId = dv.Id
-LEFT JOIN CongTrinh ct ON kq.CongTrinhId = ct.Id;
+-- ============================================================
+--  NHÓM VIEW CHI TIẾT KỸ THUẬT 
+-- ============================================================
+
+-- ViewChiTietDapTran
+IF OBJECT_ID('ViewChiTietDapTran', 'V') IS NOT NULL DROP VIEW ViewChiTietDapTran;
+GO
+CREATE VIEW ViewChiTietDapTran AS
+SELECT 
+    dt.Id, dt.CongTrinhId, ct.TenCongTrinh,
+    dt.ChieuDaiDap, dt.ChieuCaoDap, dt.CaoTrinhNguongTran, 
+    dt.HinhThucTieuNang, dt.KetCauDap
+FROM ChiTietDapTran dt
+INNER JOIN CongTrinh ct ON dt.CongTrinhId = ct.Id;
 GO
 
--- View ViewLichSuBaoTri
-IF OBJECT_ID('ViewLichSuBaoTri', 'V') IS NOT NULL DROP VIEW ViewLichSuBaoTri;
+-- ViewChiTietDuongOng
+IF OBJECT_ID('ViewChiTietDuongOng', 'V') IS NOT NULL DROP VIEW ViewChiTietDuongOng;
+GO
+CREATE VIEW ViewChiTietDuongOng AS
+SELECT 
+    do.Id, do.CongTrinhId, ct.TenCongTrinh,
+    do.ChieuDai, do.DuongKinh, do.VatLieu
+FROM ChiTietDuongOng do
+INNER JOIN CongTrinh ct ON do.CongTrinhId = ct.Id;
 GO
 
-CREATE VIEW ViewLichSuBaoTri AS
-SELECT
-    bt.Id,
-    ct.TenCongTrinh,
-    ct.MaHieu,
-    bt.NgayBatDau,
-    bt.NgayKetThuc,
-    DATEDIFF(DAY, bt.NgayBatDau, bt.NgayKetThuc) AS SoNgayThucHien,
-    bt.NoiDung,
-    bt.DonViThucHien,
-    bt.KinhPhi,
-    bt.KetQua
-FROM LichSuBaoTri bt
-INNER JOIN CongTrinh ct ON bt.CongTrinhId = ct.Id;
+-- ViewChiTietHoChua
+IF OBJECT_ID('ViewChiTietHoChua', 'V') IS NOT NULL DROP VIEW ViewChiTietHoChua;
+GO
+CREATE VIEW ViewChiTietHoChua AS
+SELECT 
+    hc.Id, hc.CongTrinhId, ct.TenCongTrinh,
+    hc.TongDungTich, hc.DungTichHuuIch, hc.DungTichChet,
+    hc.MucNuocDangBinhThuong, hc.MucNuocLuThietKe, hc.DienTichMatNuoc
+FROM ChiTietHoChua hc
+INNER JOIN CongTrinh ct ON hc.CongTrinhId = ct.Id;
 GO
 
--- View ViewVanBanPhapLy
-IF OBJECT_ID('ViewVanBanPhapLy', 'V') IS NOT NULL DROP VIEW ViewVanBanPhapLy;
+-- ViewChiTietKe
+IF OBJECT_ID('ViewChiTietKe', 'V') IS NOT NULL DROP VIEW ViewChiTietKe;
+GO
+CREATE VIEW ViewChiTietKe AS
+SELECT 
+    k.Id, k.CongTrinhId, ct.TenCongTrinh,
+    k.ChieuDai, k.CaoTrinhDinhKe, k.KetCau
+FROM ChiTietKe k
+INNER JOIN CongTrinh ct ON k.CongTrinhId = ct.Id;
 GO
 
-CREATE VIEW ViewVanBanPhapLy AS
-SELECT
-    vb.Id,
-    vb.SoKyHieu,
-    vb.NgayBanHanh,
-    vb.TrichYeu,
-    vb.LoaiVanBan,
-    ct.TenCongTrinh,
-    ct.MaHieu
-FROM VanBanPhapLy vb
-LEFT JOIN CongTrinh ct ON vb.CongTrinhId = ct.Id;
+-- ViewChiTietKenhMuong
+IF OBJECT_ID('ViewChiTietKenhMuong', 'V') IS NOT NULL DROP VIEW ViewChiTietKenhMuong;
+GO
+CREATE VIEW ViewChiTietKenhMuong AS
+SELECT 
+    km.Id, km.CongTrinhId, ct.TenCongTrinh,
+    km.ChieuDai, km.ChieuRong, km.ChieuCao, 
+    km.LuuLuong, km.KetCau
+FROM ChiTietKenhMuong km
+INNER JOIN CongTrinh ct ON km.CongTrinhId = ct.Id;
 GO
 
--- View ViewNhatKyVanHanh
+-- ViewChiTietTramBom
+IF OBJECT_ID('ViewChiTietTramBom', 'V') IS NOT NULL DROP VIEW ViewChiTietTramBom;
+GO
+CREATE VIEW ViewChiTietTramBom AS
+SELECT 
+    tb.Id, tb.CongTrinhId, ct.TenCongTrinh,
+    tb.SoMayBom, tb.CongSuatMay, 
+    tb.LuuLuongThietKe, tb.CotNuocThietKe
+FROM ChiTietTramBom tb
+INNER JOIN CongTrinh ct ON tb.CongTrinhId = ct.Id;
+GO
+
+-- ============================================================
+-- NHÓM VIEW NGHIỆP VỤ & VẬN HÀNH 
+-- ============================================================
+
+-- ViewNhatKyVanHanh: Cần format ngày tháng ra string cho C# grid
 IF OBJECT_ID('ViewNhatKyVanHanh', 'V') IS NOT NULL DROP VIEW ViewNhatKyVanHanh;
 GO
-
 CREATE VIEW ViewNhatKyVanHanh AS
-SELECT
+SELECT 
     nk.Id,
+    nk.CongTrinhId,
     ct.TenCongTrinh,
-    ct.MaHieu,
     nk.NgayBatDau,
     nk.NgayKetThuc,
+    -- Format date sang string dd/MM/yyyy để hiện lên Grid
+    FORMAT(nk.NgayBatDau, 'dd/MM/yyyy') AS NgayBatDauStr,
+    FORMAT(nk.NgayKetThuc, 'dd/MM/yyyy') AS NgayKetThucStr,
     nk.NguoiThucHien,
     nk.NoiDung,
     nk.KetQua,
@@ -574,33 +635,118 @@ FROM NhatKyVanHanh nk
 INNER JOIN CongTrinh ct ON nk.CongTrinhId = ct.Id;
 GO
 
+-- ViewLichSuBaoTri: Tương tự nhật ký, cần format ngày
+IF OBJECT_ID('ViewLichSuBaoTri', 'V') IS NOT NULL DROP VIEW ViewLichSuBaoTri;
+GO
+CREATE VIEW ViewLichSuBaoTri AS
+SELECT 
+    bt.Id,
+    bt.CongTrinhId,
+    ct.TenCongTrinh,
+    bt.NgayBatDau,
+    bt.NgayKetThuc,
+    FORMAT(bt.NgayBatDau, 'dd/MM/yyyy') AS NgayBatDauStr,
+    FORMAT(bt.NgayKetThuc, 'dd/MM/yyyy') AS NgayKetThucStr,
+    bt.NoiDung,
+    bt.DonViThucHien,
+    bt.KinhPhi,
+    bt.KetQua
+FROM LichSuBaoTri bt
+INNER JOIN CongTrinh ct ON bt.CongTrinhId = ct.Id;
+GO
+
+-- ViewVuMua: Format ngày tháng
+IF OBJECT_ID('ViewVuMua', 'V') IS NOT NULL DROP VIEW ViewVuMua;
+GO
+CREATE VIEW ViewVuMua AS
+SELECT 
+    vm.Id,
+    vm.TenVu,
+    vm.Nam,
+    vm.ThoiGianBatDau,
+    vm.ThoiGianKetThuc,
+    FORMAT(vm.ThoiGianBatDau, 'dd/MM/yyyy') AS NgayBatDauStr,
+    FORMAT(vm.ThoiGianKetThuc, 'dd/MM/yyyy') AS NgayKetThucStr
+FROM VuMua vm;
+GO
+
+-- ViewKetQuaTuoi: Tính toán tỷ lệ, lấy tên hành chính
+IF OBJECT_ID('ViewKetQuaTuoi', 'V') IS NOT NULL DROP VIEW ViewKetQuaTuoi;
+GO
+CREATE VIEW ViewKetQuaTuoi AS
+SELECT 
+    kq.Id,
+    kq.VuMuaId, kq.DonViHanhChinhId, kq.CongTrinhId, -- ID cho Form Edit
+    vm.TenVu AS TenVuMua,
+    dv.Ten AS TenHanhChinh, 
+    ct.TenCongTrinh,
+    kq.DienTichKeHoach,
+    kq.DienTichThucTe,
+    kq.NangSuat,
+    kq.SanLuong
+FROM KetQuaTuoi kq
+LEFT JOIN VuMua vm ON kq.VuMuaId = vm.Id
+LEFT JOIN DonVi dv ON kq.DonViHanhChinhId = dv.Id
+LEFT JOIN CongTrinh ct ON kq.CongTrinhId = ct.Id;
+GO
+
+-- ViewVanBanPhapLy
+IF OBJECT_ID('ViewVanBanPhapLy', 'V') IS NOT NULL DROP VIEW ViewVanBanPhapLy;
+GO
+CREATE VIEW ViewVanBanPhapLy AS
+SELECT 
+    vb.Id,
+    vb.CongTrinhId,
+    ct.TenCongTrinh,
+    vb.SoKyHieu,
+    vb.NgayBanHanh,
+    vb.TrichYeu,
+    vb.LoaiVanBan,
+    vb.TepDinhKem
+FROM VanBanPhapLy vb
+LEFT JOIN CongTrinh ct ON vb.CongTrinhId = ct.Id;
+GO
+
+-- ViewTaiLieu (Dùng chung)
+IF OBJECT_ID('ViewTaiLieu', 'V') IS NOT NULL DROP VIEW ViewTaiLieu;
+GO
+CREATE VIEW ViewTaiLieu AS
+SELECT * FROM TaiLieuDinhKem;
+GO
+
 -- ============================================================
--- PHẦN 7: TRUY VẤN KIỂM TRA
+-- NHÓM VIEW THỐNG KÊ & BÁO CÁO (Folder: ThongKe...)
 -- ============================================================
 
--- Kiểm tra dữ liệu Đơn vị hành chính
-SELECT * FROM ViewDonVi;
+-- ViewThongKeCongTrinh
+IF OBJECT_ID('ViewThongKeCongTrinh', 'V') IS NOT NULL DROP VIEW ViewThongKeCongTrinh;
+GO
+CREATE VIEW ViewThongKeCongTrinh AS
+SELECT 
+    lc.TenLoai AS TenNhom,
+    COUNT(ct.Id) AS SoLuong,
+    CAST(COUNT(ct.Id) * 100.0 / (SELECT COUNT(*) FROM CongTrinh) AS DECIMAL(10, 2)) AS TyLe,
+    MAX(lc.MoTa) AS GhiChu
+FROM CongTrinh ct
+JOIN LoaiCongTrinh lc ON ct.LoaiCongTrinhId = lc.Id
+GROUP BY lc.TenLoai;
 GO
 
--- Kiểm tra dữ liệu Công trình
-SELECT * FROM ViewCongTrinh;
+-- ViewThongKeKetQuaTuoi
+IF OBJECT_ID('ViewThongKeKetQuaTuoi', 'V') IS NOT NULL DROP VIEW ViewThongKeKetQuaTuoi;
+GO
+CREATE VIEW ViewThongKeKetQuaTuoi AS
+SELECT 
+    dv.Ten AS TenDoiTuong,
+    SUM(kq.DienTichKeHoach) AS DienTichKeHoach,
+    SUM(kq.DienTichThucTe) AS DienTichThucTe,
+    CAST(CASE WHEN SUM(kq.DienTichKeHoach) > 0 
+         THEN SUM(kq.DienTichThucTe) * 100.0 / SUM(kq.DienTichKeHoach) 
+         ELSE 0 END AS DECIMAL(10, 2)) AS TyLeDat
+FROM KetQuaTuoi kq
+JOIN DonVi dv ON kq.DonViHanhChinhId = dv.Id
+GROUP BY dv.Ten;
 GO
 
--- Kiểm tra dữ liệu Kết quả tưới
-SELECT * FROM ViewKetQuaTuoi;
-GO
-
--- Kiểm tra dữ liệu Lịch sử bảo trì
-SELECT * FROM ViewLichSuBaoTri ORDER BY NgayBatDau DESC;
-GO
-
--- Kiểm tra dữ liệu Văn bản pháp lý
-SELECT * FROM ViewVanBanPhapLy ORDER BY NgayBanHanh DESC;
-GO
-
--- Kiểm tra dữ liệu Nhật ký vận hành
-SELECT * FROM ViewNhatKyVanHanh ORDER BY NgayBatDau DESC;
-GO
-
-PRINT N'Hoàn thành khởi tạo cơ sở dữ liệu Thủy lợi!';
+'Hoàn thành khởi tạo cơ sở dữ liệu Thủy lợi!';
 GO
