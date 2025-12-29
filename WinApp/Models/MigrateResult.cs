@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Models
 {
@@ -272,7 +272,14 @@ namespace Models
         public string DuongDan { get; set; }
         public string MoTa { get; set; }
     }
-    
+
+    public partial class HuongDanSuDung
+    {
+        public int? Id { get; set; }
+        public string TieuDe { get; set; }
+        public string NoiDung { get; set; }
+    }
+
     // ======================= SQL VIEWS (TỔNG HỢP) =======================
 
     public partial class ViewCongTrinh
@@ -370,12 +377,19 @@ namespace Models
 
     // ======================= THỐNG KÊ (DTO) =======================
 
-    public class ThongKe
+    public partial class ThongKe
     {
         public string TenDoiTuong { get; set; }
         public decimal DienTichKeHoach { get; set; }
         public decimal DienTichThucTe { get; set; }
         public decimal TyLeDat { get; set; }
+        public string GhiChu { get; set; }
+    }
+    public partial class ThongKeCongTrinh
+    {
+        public string TenNhom { get; set; } // Tên Loại, Tên Cấp, hoặc Tên Đơn vị
+        public int SoLuong { get; set; }
+        public double TyLe { get; set; }  
         public string GhiChu { get; set; }
     }
 }
