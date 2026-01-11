@@ -77,6 +77,20 @@ INSERT INTO TaiKhoan (Ten, MatKhau, QuyenId, HoSoId) VALUES
     ('0989154248', '1234', 3, 1),
     ('0989708960', '1234', 3, 2);
 GO
+-- Bảng LichSuTruyCap
+IF OBJECT_ID('LichSuTruyCap', 'U') IS NOT NULL DROP TABLE LichSuTruyCap;
+GO
+
+CREATE TABLE LichSuTruyCap (
+    Id INT PRIMARY KEY IDENTITY,
+    HoSoId INT FOREIGN KEY REFERENCES HoSo(Id),
+    ThoiGian DATETIME,
+    HanhDong NVARCHAR(200),
+    IP VARCHAR(50),
+    DoiTuongThaoTac NVARCHAR(200)
+);
+GO
+
 -- ============================================================
 -- PHẦN 2: ĐỊA GIỚI HÀNH CHÍNH
 -- ============================================================
@@ -307,22 +321,8 @@ GO
 
 
 -- ============================================================
--- PHẦN 4: NGHIỆP VỤ & KẾ HOẠCH
+-- PHẦN 4: Quản lí tưới tiêu
 -- ============================================================
-
--- Bảng KyQuyHoach
-IF OBJECT_ID('KyQuyHoach', 'U') IS NOT NULL DROP TABLE KyQuyHoach;
-GO
-
-CREATE TABLE KyQuyHoach (
-    Id INT PRIMARY KEY IDENTITY,
-    TenKyQuyHoach NVARCHAR(200),
-    NamBatDau INT,
-    NamKetThuc INT,
-    MoTa NVARCHAR(MAX),
-    TrangThai NVARCHAR(50)
-);
-GO
 
 -- Bảng VuMua
 IF OBJECT_ID('VuMua', 'U') IS NOT NULL DROP TABLE VuMua;
@@ -356,6 +356,19 @@ GO
 -- ============================================================
 -- PHẦN 5: QUẢN LÝ VẬN HÀNH & BẢO TRÌ
 -- ============================================================
+-- Bảng KyQuyHoach
+IF OBJECT_ID('KyQuyHoach', 'U') IS NOT NULL DROP TABLE KyQuyHoach;
+GO
+
+CREATE TABLE KyQuyHoach (
+    Id INT PRIMARY KEY IDENTITY,
+    TenKyQuyHoach NVARCHAR(200),
+    NamBatDau INT,
+    NamKetThuc INT,
+    MoTa NVARCHAR(MAX),
+    TrangThai NVARCHAR(50)
+);
+GO
 
 -- Bảng LichSuBaoTri
 IF OBJECT_ID('LichSuBaoTri', 'U') IS NOT NULL DROP TABLE LichSuBaoTri;
@@ -419,19 +432,6 @@ CREATE TABLE TaiLieuDinhKem (
 GO
 
 
--- Bảng LichSuTruyCap
-IF OBJECT_ID('LichSuTruyCap', 'U') IS NOT NULL DROP TABLE LichSuTruyCap;
-GO
-
-CREATE TABLE LichSuTruyCap (
-    Id INT PRIMARY KEY IDENTITY,
-    HoSoId INT FOREIGN KEY REFERENCES HoSo(Id),
-    ThoiGian DATETIME,
-    HanhDong NVARCHAR(200),
-    IP VARCHAR(50),
-    DoiTuongThaoTac NVARCHAR(200)
-);
-GO
 
 
 -- ============================================================
